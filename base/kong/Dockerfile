@@ -4,7 +4,7 @@ FROM registry.redhat.io/ubi8/ubi
 RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && rm -rf /var/cache/yum
 
 RUN yum install epel-release wget curl nc hostname -y && \
-yum install https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-1.4.0.el7.amd64.rpm -y && \
+yum install https://bintray.com/kong/kong-rpm/download_file?file_path=rhel/8/kong-enterprise-edition-2.3.2.0.rhel8.noarch.rpm	 -y && \
 yum clean all && rm -rf /var/cache/yum
 
 COPY run /usr/bin/run
