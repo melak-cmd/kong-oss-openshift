@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi7/ubi-minimal
+FROM registry.redhat.io/ubi7/ubi
 
 RUN yum install epel-release wget curl nc hostname -y && \
 yum install https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-1.4.0.el7.amd64.rpm -y && \
